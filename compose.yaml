@@ -12,6 +12,7 @@ services:
     user: "${STACK_UID:-1000}:${STACK_GID:-1000}"
     environment:
       HOME: /tmp
+      KEDRO_LOGGING_CONFIG: /app/container-logging.yml
     build:
       context: .
       dockerfile: Dockerfile
@@ -20,3 +21,4 @@ services:
     volumes:
       - ./data:/app/data
       - ./fatigued-face-space/conf:/app/conf:ro
+      - ./container-logging.yml:/app/container-logging.yml:ro

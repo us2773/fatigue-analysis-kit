@@ -1,0 +1,14 @@
+version: 1
+disable_existing_loggers: false
+handlers:
+  rich:
+    class: kedro.logging.RichHandler
+    rich_tracebacks: true
+loggers:
+  kedro:
+    level: INFO
+  fatigued_face_space:
+    level: INFO
+root:
+  level: INFO
+  handlers: [rich]
