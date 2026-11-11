@@ -1,0 +1,22 @@
+services:
+  openface:
+    image: algebr/openface:latest
+    user: "${STACK_UID:-1000}:${STACK_GID:-1000}"
+    working_dir: /home/openface-build
+    entrypoint: ["/bin/bash", "/scripts/openface.sh"]
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts:ro
+
+  kedro:
+    user: "${STACK_UID:-1000}:${STACK_GID:-1000}"
+    environment:
+      HOME: /tmp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    entrypoint: ["kedro"]
+    volumes:
+      - ./data:/app/data
+      - ./fatigued-face-space/conf:/app/conf:ro

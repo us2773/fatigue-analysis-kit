@@ -1,0 +1,4 @@
+[submodule "fatigued-face-space"]
+	path = fatigued-face-space
+	url = https://github.com/us2773/fatigued-face-space.git
+	branch = feat/quartile

@@ -1,0 +1,7 @@
+data/
+fatigued-face-space/.git/
+fatigued-face-space/data/
+fatigued-face-space/conf/local/
+fatigued-face-space/.venv/
+fatigued-face-space/**/__pycache__/
+fatigued-face-space/notebooks/
