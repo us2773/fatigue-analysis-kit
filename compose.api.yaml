@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    user: "${STACK_UID:-1000}:${STACK_GID:-1000}"
+    environment:
+      FF_API_DATA_DIR: /data
+      FF_API_MAX_UPLOAD_BYTES: "${FF_API_MAX_UPLOAD_BYTES:-268435456}"
+    ports:
+      - "${FF_API_HOST:-127.0.0.1}:8000:8000"
+    volumes:
+      - ./data:/data

@@ -2,3 +2,16 @@ data/
 .env
 .env.*
 !.env.example
+
+# API environments, generated output and private recordings
+.venv*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+logs/
+*.mp4
+*.mov

@@ -1,5 +1,7 @@
 # fatigue-analysis-kit
 
+動画受信・サンプルJSON応答APIの起動方法とHTTP仕様は [api/README.md](api/README.md) を参照してください。
+
 OpenFace + Kedro を使う疲労分析の実行環境です。
 
 このディレクトリは `fatigued-face-space` 本体とは独立した実行環境です。OpenFace と Kedro のコンテナが `data/` を共有します。既存の Kedro プロジェクトの `data/` は使いません。
