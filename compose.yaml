@@ -20,5 +20,6 @@ services:
     entrypoint: ["kedro"]
     volumes:
       - ./data:/app/data
+      - ./scripts:/scripts:ro
       - ./fatigued-face-space/conf:/app/conf:ro
       - ./container-logging.yml:/app/container-logging.yml:ro
